@@ -1,5 +1,5 @@
 const int sensorPin = A0;
-const float constCleciusPerBit = 5/1024.0;
+const float constVoltagePerBit = 5/1024.0;
 
 
 void setup() {
@@ -9,7 +9,7 @@ void setup() {
 
 void loop() {
   float sensorVal = analogRead(sensorPin);
-  float temperature = (sensorVal * constCleciusPerBit)*100.0 - 50.0;
+  float temperature = (sensorVal * constVoltagePerBit)*100.0 - 50.0;
 
   Serial.println("Sensor Temperature: ");
   Serial.println(temperature);
